@@ -19,6 +19,18 @@ app.use(cors());
 // ─── ROUTES ──────────────────────────────────────────────────────────────────
 
 // 1. GET ALL TASKS
+app.get("/", (req, res) => {
+  res.json({
+    message: "To-Do API is running! 🚀",
+    endpoints: {
+      getAllTasks: "GET    /tasks",
+      createTask:  "POST   /tasks",
+      updateTask:  "PUT    /tasks/:id",
+      deleteTask:  "DELETE /tasks/:id"
+    }
+  });
+});
+
 app.get("/tasks", async (req, res) => {
   try {
     const { completed } = req.query;

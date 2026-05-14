@@ -1,5 +1,7 @@
 import dns from "dns";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+import authRoutes from './routes/auth.js';
 import dotenv from "dotenv";
 dotenv.config(); 
 import express from 'express';
@@ -15,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use('/auth', authRoutes);
 
 // ─── ROUTES ──────────────────────────────────────────────────────────────────
 

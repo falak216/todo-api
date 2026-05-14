@@ -471,14 +471,14 @@
 </main>
 
 <footer>
-  <div class="footer-api">api → http://localhost:3000</div>
+  <div class="footer-api">api → https://todo-api-production-0640.up.railway.app</div>
   <div>to-do app · built with express + mongoose</div>
 </footer>
 
 <div id="toast"></div>
 
 <script>
-  const API = 'https://todo-api-production-0640.up.railway.app/tasks';
+  const API =  'https://todo-api-production-0640.up.railway.app';
   let tasks = [];
   let currentFilter = 'all';
 
@@ -525,8 +525,8 @@
       document.getElementById('empty-state').style.display = 'block';
       document.getElementById('empty-state').innerHTML = `
         <div class="empty-icon">⚠</div>
-        <div style="color:var(--danger)">cannot reach localhost:3000</div>
-        <div style="margin-top:6px;font-size:11px;opacity:.7">run <code style="color:var(--accent)">npm start</code> in your api folder</div>`;
+        <div style="color:var(--danger)">cannot reach the API</div>
+        <div style="margin-top:6px;font-size:11px;opacity:.7">run <code style="color:var(--accent)">please try again later</code></div>`;
     }
   }
 
